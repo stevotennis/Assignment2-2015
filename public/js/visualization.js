@@ -57,6 +57,14 @@ d3.json('/igMediaCounts', function(error, data) {
     .style("text-anchor", "end")
     .text("Number of Photos");
 
+   var sorted = data.users;
+   sorted.sort();
+
+  // for(int i = 0; i < sorted.length; i++){
+  //   console.log(sorted.length);
+  //   console.log("HELLO");
+  // }
+  
   //set up bars in bar graph
   svg.selectAll(".bar")
     .data(data.users)
